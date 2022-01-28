@@ -31,7 +31,7 @@ new CodeTypingPlugin.WriteCode(
               facebook:"",
               instagram:""
           },
-          thankYouForYourTime:true
+          thankYouForYourTime: true
          }`
     }
   }, 
@@ -41,20 +41,11 @@ new CodeTypingPlugin.WriteCode(
   }
 );
 
-export const codeEditor = (selector) => new CodeTypingPlugin.Clip({
-  darkTheme: true,
-  lineNumbers: true,
-  readOnly: false
-}, 
-{
-  selector
-});
-
-export const button =  (selector, duration) => 
+export const buttonContainer =  (selector, duration) => 
 new CSSEffect(
   {
     animatedAttrs: {
-      opacity:1
+      backdropFilter:"blur(2px)"
     }
   }, 
   {
@@ -62,3 +53,21 @@ new CSSEffect(
     duration
   }
 );
+
+export const subscribeButton = (selector, duration, easing = "easeInOutSine") =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        width:"230px",
+        height:"20px",
+        paddingTop:"10px",
+        paddingBottom:"14px",
+        fontSize:"16px"
+      },
+    },
+    {
+      selector,
+      duration,
+      easing
+    }
+  );
