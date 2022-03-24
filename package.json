@@ -65,6 +65,6 @@
     "webpack-dev-server": "4.7.3"
   },
   "dependencies": {
-    "@donkeyclip/motorcortex-code-typing": "^1.0.12"
+    "@donkeyclip/motorcortex-code-typing": "1.0.13"
   }
 }
