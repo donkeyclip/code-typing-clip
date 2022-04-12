@@ -58,12 +58,15 @@ export const subscribeButton = (selector, duration, easing = "easeInOutSine") =>
   new CSSEffect(
     {
       animatedAttrs: {
-        width:"230px",
-        height:"20px",
-        paddingTop:"10px",
-        paddingBottom:"14px",
-        fontSize:"16px"
+        transform:{
+          scale:1
+        }
       },
+      initialValues:{
+        transform:{
+          scale:0
+        }
+      }
     },
     {
       selector,
