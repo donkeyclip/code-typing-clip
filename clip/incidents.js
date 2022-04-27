@@ -70,3 +70,4 @@ export const subscribeButton = (selector, duration, easing = "easeInOutSine") =>
       easing,
     }
   );
+

@@ -36,5 +36,4 @@ export const clip = new HTMLClip({
 
 clip.addIncident(codeEditor,0);
 codeEditor.addIncident(WriteSthg("!#editor",27000),1);
-clip.addIncident(buttonContainer(".blur",1),28500);
 clip.addIncident(subscribeButton(".button",500),28500);
