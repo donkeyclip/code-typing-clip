@@ -1,12 +1,12 @@
-import { loadPlugin,CSSEffect } from "@donkeyclip/motorcortex";
+import { loadPlugin, CSSEffect } from "@donkeyclip/motorcortex";
 import MCCodeTyping from "@donkeyclip/motorcortex-code-typing";
 const CodeTypingPlugin = loadPlugin(MCCodeTyping);
 
-export const WriteSthg =  (selector, duration) => 
-new CodeTypingPlugin.WriteCode(
-  {
-    animatedAttrs: {
-       code: `const welcome = {
+export const WriteSthg = (selector, duration) =>
+  new CodeTypingPlugin.WriteCode(
+    {
+      animatedAttrs: {
+        code: `const welcome = {
           from:"Donkeyclip",
           to:"Claudio Holanda",
           reason:"Introduce MotorCortexjs",
@@ -24,50 +24,49 @@ new CodeTypingPlugin.WriteCode(
           extra:"You can use our plugins, " + " create yours, " + " or use HTML and CSS.",
           whereYouCanFindMoreInfo:"https://motorcortexjs.com/",
           getInTouchWithUs:{
-              email:"donkeyclip@...com",
+              email:"social@donkeyclip.com",
               github:"https://github.com/donkeyclip",
-              twitter:"",
-              linkedin:"",
+              twitter:"https://twitter.com/Donkeyclip1",
               facebook:"",
-              instagram:""
+              instagram:"https://www.instagram.com/donkeyclip"
           },
           thankYouForYourTime: true
-         }`
-    }
-  }, 
-  {
-    selector,
-    duration
-  }
-);
-
-export const buttonContainer =  (selector, duration) => 
-new CSSEffect(
-  {
-    animatedAttrs: {
-      backdropFilter:"blur(2px)"
-    }
-  }, 
-  {
-    selector,
-    duration
-  }
-);
-
-export const subscribeButton = (selector, duration, easing = "easeInOutSine") =>
-  new CSSEffect(
-    {
-      animatedAttrs: {
-        width:"230px",
-        height:"20px",
-        paddingTop:"10px",
-        paddingBottom:"14px",
-        fontSize:"16px"
+         }`,
       },
     },
     {
       selector,
       duration,
-      easing
+    }
+  );
+
+export const buttonContainer = (selector, duration) =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        backdropFilter: "blur(2px)",
+      },
+    },
+    {
+      selector,
+      duration,
+    }
+  );
+
+export const subscribeButton = (selector, duration, easing = "easeInOutSine") =>
+  new CSSEffect(
+    {
+      animatedAttrs: {
+        width: "230px",
+        height: "20px",
+        paddingTop: "10px",
+        paddingBottom: "14px",
+        fontSize: "16px",
+      },
+    },
+    {
+      selector,
+      duration,
+      easing,
     }
   );
