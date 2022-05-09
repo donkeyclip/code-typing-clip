@@ -17,7 +17,7 @@
     "start": "npm run build & webpack serve --mode=development --config ./demo/webpack.config.js",
     "test": "HERE GOES YOUR TEST TASK",
     "test:prod": "npm run lint",
-    "render": "node node_modules/dclip-video-renderer"
+    "render": "node node_modules/@donkeyclip/video-renderer"
   },
   "keywords": [
     "motorcortex",
@@ -29,16 +29,14 @@
     }
   },
   "devDependencies": {
-    "@donkeyclip/motorcortex": "8.0.4",
-    "html-loader": "3.1.0",
-    "raw-loader": "4.0.2",
     "@babel/core": "7.16.12",
     "@babel/eslint-parser": "7.16.5",
     "@babel/plugin-syntax-jsx": "7.16.7",
     "@babel/plugin-transform-react-jsx": "7.16.7",
     "@babel/preset-env": "7.16.11",
-    "@donkeyclip/motorcortex-player": "2.6.1",
-    "@donkeyclip/video-renderer": "0.0.1",
+    "@donkeyclip/motorcortex": "^9.1.5",
+    "@donkeyclip/motorcortex-player": "2.9.7",
+    "@donkeyclip/video-renderer": "1.4.2",
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-json": "4.1.0",
@@ -56,7 +54,9 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-promise": "5.2.0",
+    "html-loader": "3.1.0",
     "prettier": "2.5.1",
+    "raw-loader": "4.0.2",
     "rimraf": "3.0.2",
     "size-limit": "6.0.4",
     "style-loader": "3.3.1",
@@ -65,6 +65,6 @@
     "webpack-dev-server": "4.7.3"
   },
   "dependencies": {
-    "@donkeyclip/motorcortex-code-typing": "2.0.0"
+    "@donkeyclip/motorcortex-code-typing": "2.1.0"
   }
 }
