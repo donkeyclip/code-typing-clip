@@ -1,7 +1,7 @@
 import { loadPlugin,HTMLClip } from "@donkeyclip/motorcortex";
 import html from "./clip.html";
 import css from "!!raw-loader!./clip.css";
-import {WriteSthg,buttonContainer,subscribeButton } from "./incidents";
+import {WriteSthg,subscribeButton } from "./incidents";
 import { initParamsValidationRules, initParams } from "./initParams";
 import MCCodeTyping from "@donkeyclip/motorcortex-code-typing";
 const CodeTypingPlugin = loadPlugin(MCCodeTyping);
@@ -10,8 +10,6 @@ export const clip = new HTMLClip({
   html,
   css,
   host: document.getElementById("clip"),
-  initParamsValidationRules,
-  initParams: initParams[0].value,
   containerParams: {
     width: "800px",
     height: "600px",
@@ -31,7 +29,9 @@ export const clip = new HTMLClip({
 }, 
 {
   selector:".code",
-  containerParams: { width: '800px', height: '600px' }
+  containerParams: { width: '800px', height: '600px' },
+  initParams:initParams[0].value,
+  // initParamsValidationRules -> errors if uncomment
 });
 
 clip.addIncident(codeEditor,0);
