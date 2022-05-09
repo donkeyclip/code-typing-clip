@@ -24,11 +24,10 @@ export const WriteSthg = (selector, duration) =>
           extra:"You can use our plugins, " + " create yours, " + " or use HTML and CSS.",
           whereYouCanFindMoreInfo:"https://motorcortexjs.com/",
           getInTouchWithUs:{
-              email:"social@donkeyclip.com",
-              github:"https://github.com/donkeyclip",
-              twitter:"https://twitter.com/Donkeyclip1",
-              facebook:"",
-              instagram:"https://www.instagram.com/donkeyclip"
+            email:"social@donkeyclip.com",
+            github:"https://github.com/donkeyclip",
+            twitter:"https://twitter.com/Donkeyclip1",
+            instagram:"https://www.instagram.com/donkeyclip"
           },
           thankYouForYourTime: true
          }`,
