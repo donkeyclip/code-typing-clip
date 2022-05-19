@@ -6,7 +6,7 @@ export const WriteSthg = (selector, duration) =>
   new CodeTypingPlugin.WriteCode(
     {
       animatedAttrs: {
-        code: "@initParams.code",
+        code: "@initParams.test",
       },
     },
     {

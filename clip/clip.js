@@ -14,6 +14,7 @@ export const clip = new HTMLClip({
     width: "800px",
     height: "600px",
   },
+  initParams:initParams[0].value,
   fonts: [
     {
       type: "google-font",
@@ -30,7 +31,7 @@ export const clip = new HTMLClip({
 {
   selector:".code",
   containerParams: { width: '800px', height: '600px' },
-  initParams:initParams[0].value,
+  initParams:{test:"@initParams.code"},
   // initParamsValidationRules -> errors if uncomment
 });
 
