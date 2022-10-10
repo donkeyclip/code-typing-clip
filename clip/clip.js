@@ -2,7 +2,8 @@ import { loadPlugin,HTMLClip } from "@donkeyclip/motorcortex";
 import html from "./clip.html";
 import css from "!!raw-loader!./clip.css";
 import {WriteSthg,subscribeButton } from "./incidents";
-import { initParamsValidationRules, initParams } from "./initParams";
+import initParams from "./initParams";
+import initParamsValidationRules from "./initParamsValidationRules";
 import MCCodeTyping from "@donkeyclip/motorcortex-code-typing";
 const CodeTypingPlugin = loadPlugin(MCCodeTyping);
 
@@ -14,12 +15,15 @@ export const clip = new HTMLClip({
     width: "800px",
     height: "600px",
   },
+
   fonts: [
     {
       type: "google-font",
       src: "https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap",
     },
   ],
+  initParamsValidationRules,
+  initParams: initParams[0].value,
 });
 
  const codeEditor =  new CodeTypingPlugin.Clip({
@@ -30,8 +34,6 @@ export const clip = new HTMLClip({
 {
   selector:".code",
   containerParams: { width: '800px', height: '600px' },
-  initParams:initParams[0].value,
-  // initParamsValidationRules -> errors if uncomment
 });
 
 clip.addIncident(codeEditor,0);
