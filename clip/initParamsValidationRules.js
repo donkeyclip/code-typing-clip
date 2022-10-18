@@ -1,11 +1,11 @@
 export default {
-    receiver:{
-      label:"Receiver",
-      type:"string"
+    darkTheme:{
+      label:"Dark Theme",
+      type:"boolean"
     },
-    reason:{
-      label:"Reason",
-      type:"string"
+    lineNumbers:{
+      label:"Number the lines",
+      type:"boolean"
     },
   };
   

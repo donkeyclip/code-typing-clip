@@ -1,16 +1,15 @@
 import { loadPlugin, CSSEffect } from "@donkeyclip/motorcortex";
 import MCCodeTyping from "@donkeyclip/motorcortex-code-typing";
 const CodeTypingPlugin = loadPlugin(MCCodeTyping);
-import initParams from "./initParams";
 
 export const WriteSthg = (selector, duration) =>
   new CodeTypingPlugin.WriteCode(
     {
-      animatedAttrs: {
-        code: `const welcome = {
+      animatedAttrs: { 
+        code:`const welcome = {
           from:"Donkeyclip",
-          to:"`+ initParams[0].value.receiver +`",
-          reason:"`+ initParams[0].value.reason +`",
+          to:"Dev Community",
+          reason:"Introduce MotorCortexjs",
           whatItIs:"Animation Framework",
           whatYouCanDoWith:"Create dynamic clips and plugins",
           easyToUse:true,
@@ -30,7 +29,7 @@ export const WriteSthg = (selector, duration) =>
             instagram:"https://www.instagram.com/donkeyclip"
           },
           thankYouForYourTime: true
-         },`
+         }`
       },
     },
     {
@@ -56,7 +55,7 @@ export const subscribeButton = (selector, duration, easing = "easeInOutSine") =>
     {
       selector,
       duration,
-      easing,
+      easing
     }
   );
 
