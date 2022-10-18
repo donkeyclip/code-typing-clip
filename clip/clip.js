@@ -1,10 +1,11 @@
-import { loadPlugin,HTMLClip } from "@donkeyclip/motorcortex";
+import { HTMLClip } from "@donkeyclip/motorcortex";
 import html from "./clip.html";
 import css from "!!raw-loader!./clip.css";
-import {WriteSthg,subscribeButton } from "./incidents";
-import { initParamsValidationRules, initParams } from "./initParams";
-import MCCodeTyping from "@donkeyclip/motorcortex-code-typing";
-const CodeTypingPlugin = loadPlugin(MCCodeTyping);
+import {subscribeButton } from "./incidents";
+import initParams from "./initParams";
+import initParamsValidationRules from "./initParamsValidationRules";
+
+import codeEditor from "./codeEditor";
 
 export const clip = new HTMLClip({
   html,
@@ -14,6 +15,8 @@ export const clip = new HTMLClip({
     width: "800px",
     height: "600px",
   },
+  //initParamsValidationRules,
+  initParams:initParams[0].value,
   fonts: [
     {
       type: "google-font",
@@ -22,18 +25,7 @@ export const clip = new HTMLClip({
   ],
 });
 
- const codeEditor =  new CodeTypingPlugin.Clip({
-  darkTheme: true,
-  lineNumbers: true,
-  readOnly: false
-}, 
-{
-  selector:".code",
-  containerParams: { width: '800px', height: '600px' },
-  initParams:initParams[0].value,
-  // initParamsValidationRules -> errors if uncomment
-});
+ 
 
 clip.addIncident(codeEditor,0);
-codeEditor.addIncident(WriteSthg("!#editor",27000),1);
 clip.addIncident(subscribeButton(".button",500),28500);
