@@ -34,7 +34,7 @@
     "@babel/plugin-syntax-jsx": "7.16.7",
     "@babel/plugin-transform-react-jsx": "7.16.7",
     "@babel/preset-env": "7.16.11",
-    "@donkeyclip/motorcortex": "^9.1.5",
+    "@donkeyclip/motorcortex": "^9.5.0",
     "@donkeyclip/motorcortex-player": "2.9.7",
     "@donkeyclip/video-renderer": "1.4.2",
     "@rollup/plugin-babel": "5.3.0",
